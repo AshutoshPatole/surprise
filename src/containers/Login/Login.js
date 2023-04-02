@@ -6,14 +6,21 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
+  const secretPassword = "Wow_What_A_Way_To_Hack_In";
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Login form submitted");
+    if (username === "hacky_dork" && password === secretPassword) {
+      console.log("okay");
+    } else {
+      alert("Wrong username/password");
+    }
   };
 
   return (
     <div className="login-container">
-      <h2 className="login-heading">Login</h2>
+      <h2 className="login-heading">Hack your way into!</h2>
+      <p className="user-name">Your encoded user name is aGFja3lfZG9yaw==</p>
+      <p className="saucy">{secretPassword}</p>
       <form className="login-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="username" className="form-label">
