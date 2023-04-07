@@ -1,18 +1,32 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
-  const secretPassword = "Wow_What_A_Way_To_Hack_In";
-  const handleSubmit = (e) => {
+  const secretPassword = "a";
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (username === "hacky_dork" && password === secretPassword) {
-      console.log("okay");
-    } else {
+    const response = await fetch("http://localhost:8000/u/check-password", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        userName: username,
+        password: password,
+      }),
+    });
+    if (response.status !== 200) {
       alert("Wrong username/password");
+    } else {
+      const data = await response.json();
+      sessionStorage.setItem("u", JSON.stringify(data));
+      navigate("/intro");
     }
   };
 
