@@ -16,11 +16,11 @@ function MyAppBar() {
         }}
       >
         <h3 style={{ margin: 0, color: "greenyellow" }}>PHack</h3>
-        <Link to="/intro">
-          <h5 style={{ margin: 100, color: "greenyellow" }}>Information</h5>
+        <Link to="/intro" style={{ margin: 100, color: "greenyellow" }}>
+          <h5>Information</h5>
         </Link>
-        <Link to="/war">
-          <h5 style={{ margin: 0, color: "greenyellow" }}>WarGame</h5>
+        <Link to="/war" style={{ margin: 0, color: "greenyellow" }}>
+          <h5>WarGame</h5>
         </Link>
         <div
           style={{ display: "flex", alignItems: "center", marginLeft: "auto" }}
