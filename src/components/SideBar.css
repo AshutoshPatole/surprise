@@ -2,11 +2,13 @@
   position: fixed;
   top: 10.5vh;
   left: 0;
-  width: 200px;
+  width: 190px;
   height: 100vh;
+  /* height: auto; */
+  overflow: hidden;
   padding: 20px;
   background-color: #333;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 }
 
 .sidebar h2 {
