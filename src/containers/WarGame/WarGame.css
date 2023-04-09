@@ -1,0 +1,11 @@
+.levels {
+  display: flex;
+}
+
+.levels-info {
+  margin-left: 38vh;
+  width: 100%;
+  height: 100vh;
+  background-color: rebeccapurple;
+  padding: 20px;
+}

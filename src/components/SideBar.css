@@ -1,11 +1,11 @@
 .sidebar {
   position: fixed;
-  top: 0;
+  top: 10.5vh;
   left: 0;
   width: 200px;
   height: 100vh;
   padding: 20px;
-  background-color: #fff;
+  background-color: #333;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -13,6 +13,7 @@
   margin-bottom: 20px;
   font-size: 1.5rem;
   font-weight: bold;
+  color: white;
 }
 
 .sidebar ul {
@@ -29,12 +30,12 @@
   display: block;
   padding: 5px 10px;
   border-radius: 5px;
-  background-color: #f1f1f1;
+  background-color: #333;
   text-decoration: none;
-  color: #333;
+  color: white;
   transition: background-color 0.2s ease-in-out;
 }
 
 .sidebar a:hover {
-  background-color: #dcdcdc;
+  background-color: green;
 }
