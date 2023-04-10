@@ -1,0 +1,21 @@
+.ssh-details {
+  margin: 10px;
+  border: 2.5px solid green;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.ssh-detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ssh-label {
+  /* font-weight: bold; */
+  margin-right: 10px;
+}
+
+.ssh-value {
+  font-family: monospace;
+}
