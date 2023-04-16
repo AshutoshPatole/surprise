@@ -38,7 +38,7 @@ const WarGame = () => {
     };
   }, []);
   const secondsAway = Math.round(timeAway / 1000);
-  reducePrize({ time: secondsAway * 10 });
+  reducePrize({ time: secondsAway * 5 });
   if (data === null) {
     return (
       <div
