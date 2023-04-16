@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import styles from "./Dialog.module.css";
 
-function HintDialog({ id, onHintUsed }) {
+function HintDialog({ id }) {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [showHint, setShowHint] = useState(false);
   const [hint, setHint] = useState("");
