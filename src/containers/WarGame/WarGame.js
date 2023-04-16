@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import SshDetails from "../../components/connection/Ssh";
 import Dialog from "../../components/Dialog";
-import { getUserDetails } from "../../utils/user_details";
 import { reducePrize } from "../../utils/reduce";
 
 const WarGame = () => {
@@ -56,7 +55,7 @@ const WarGame = () => {
   const sshData = {
     host: "localhost",
     port: 22,
-    user: "bandit" + index,
+    user: "bandit" + (index + 1),
   };
 
   const tips = {
@@ -72,9 +71,9 @@ const WarGame = () => {
             {data.map((level, i) => (
               <li key={level.level}>
                 <p
-                  className={i + 1 === index ? "selected" : ""}
+                  className={i === index ? "selected" : ""}
                   onClick={() => {
-                    setIndex(level.level);
+                    setIndex(level.level - 1);
                   }}
                 >
                   War {level.level}
