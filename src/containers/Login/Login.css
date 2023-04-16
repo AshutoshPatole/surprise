@@ -77,7 +77,8 @@
 
 /* Hover effect for the show password button */
 .show-password-button:hover {
-  color: #008812;
+  color: green;
+  background-color: transparent;
 }
 
 /* Focus styles for form inputs */
